@@ -9,36 +9,23 @@
   body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f8f8; color:#333; }
   header { background:#b3a209; padding: 30px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
   nav a { margin-left:15px; text-decoration:none; color:#333; }
-  .hero { text-align:center; padding:70px 20px; background:#ffffff;
-          background-image: url('wall.jpg');
-        }
+  .hero { text-align:center; padding:70px 20px; background:#ffffff; background-image: url('wall.jpg'); }
   .hero h1 { margin-bottom:10px; }
   .portfolio { display:grid; grid-template-columns:repeat(3, 1fr); gap:50px; padding:50px 20px; }
   .portfolio img { width: 100%; height: 400px; object-fit: cover; border-radius: 8%; cursor: pointer; transition: transform 0.3s; }
   .portfolio img:hover { transform: scale(1.05); }
+  .more{ display:grid; grid-template-columns:repeat(3, 1fr); gap:50px; padding:50px 20px; }
+  .more img { width: 100%; height: 400px; object-fit: cover; border-radius: 8%; cursor: pointer; transition: transform 0.3s; }
+  .more img:hover { transform: scale(1.05); }
   .about, .contact { padding:50px 20px; background:#fff; margin:20px 0; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
   footer { text-align:center; padding:20px; background:#333; color:#fff;}
-  button { padding:10px 50px; background:#363632; color:#fff; border:none; border-radius:5px; cursor:pointer;}
+  button { padding:20px 70px; background:#363632; color:#fff; border:none; border-radius:5px; cursor:pointer; font-weight: bold; text-transform: uppercase;}
   .row { display: flex; justify-content: space-between;padding: 5px 0; }
   .left { padding-left: 10%; text-align: left; font-weight: bold;color: #ffffff;}
   .right { padding-right: 10%; text-align: right; font-weight: bold; color: #ffffff;}
-  .lightbox {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.8);
-      display: none; /* 默认隐藏 */
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.5);
-    }
+  .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; justify-content: center; align-items: center; z-index: 9999; }
+  .lightbox img { max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 20px rgba(255,255,255,0.5);}
+  .hidden { display: none; }
 </style>
 </head>
 <body>
@@ -47,7 +34,7 @@
   <div class="logo" style="font-weight: bold; font-size:x-large; color: #46400f; font-family:Verdana, Geneva, Tahoma, sans-serif;">富景园艺 <span style="color: #635a0e;">Fortune Landscape</span></div>
   <nav>
     <a href="#hero" style="font-weight: bold;">Home</a>
-    <a href="#portfolio" style="font-weight: bold;">Our works</a>
+    <a href="#portfolio" style="font-weight: bold;">Portfolio</a>
     <a href="#about" style="font-weight: bold;">About us</a>
     <a href="#contact" style="font-weight: bold;">Contact us</a>
   </nav>
@@ -106,7 +93,7 @@
     <span class="right">换草坪，添加肥料 &middot</span>
   </div>
 
-  <button onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">Show My Works</button>
+  <button onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">Show My Portfolilo</button>
 </section>
 
 
@@ -118,6 +105,23 @@
     <img src="LS5.jpg" alt="Driveway" > 
     <img src="LS7.jpg" alt="Driveway" >   
 </section>
+
+<section class="more hidden" id="morePortfolio">
+  <img src="LS6.jpg" alt="Driveway" >
+  <img src="LS8.jpg" alt="Driveway" >
+  <img src="LS9.jpg" alt="Driveway" >
+  <img src="LS10.jpg" alt="Driveway" >
+  <img src="LS11.jpg" alt="Driveway" >
+  <img src="LS12.jpg" alt="Driveway" >
+  <img src="LS13.jpg" alt="Driveway" >
+  <img src="LS14.jpg" alt="Driveway" >
+</section>
+
+<div class="seeMore" style="text-align: center;">
+  <button style="background-color: #9e9940; color:#363423; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;" onclick="showMore()">
+    See More Portfolio
+  </button>
+</div>
 
 <div class="lightbox" id="lightbox">
   <img id="lightbox-img" src="">
