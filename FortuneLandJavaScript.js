@@ -13,4 +13,10 @@ const gallery = document.querySelectorAll('.portfolio img');
   // 点击背景 -> 关闭大图
   lightbox.addEventListener('click', () => {
     lightbox.style.display = 'none';
+
   });
+
+  function showMore() {
+    document.getElementById("morePortfolio").classList.remove("hidden");
+    document.querySelector(".seeMore").style.display = "none"; 
+  }
