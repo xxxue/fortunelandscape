@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fortune Landscape</title>
+<style>
+  .logo {text-decoration:none; color:#000000;}
+  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f8f8; color:#333; }
+  header { background:#dbd788; padding: 30px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+  nav a { margin-left:15px; text-decoration:none; color:#333; }
+  .frontDoorImages { display:grid; grid-template-columns:repeat(3, 1fr); gap: 75px; padding:75px 50px; align-items: center;}
+  .frontDoorImages img { width: 100%; height: 400px; object-fit: cover; border-radius: 8%; transition: transform 0.3s; cursor:pointer;}
+  .frontDoorImages img:hover { transform: scale(1.05); }
+  .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; justify-content: center; align-items: center; z-index: 9999; }
+  .lightbox img { max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 20px rgba(255,255,255,0.5);}
+</style>
+</head>
+<body>
+
+<header>
+  
+  <div class="logo" style="display: flex; align-items:flex-end; font-weight: bold; font-size:x-large; color: #46400f; font-family:Verdana, Geneva, Tahoma, sans-serif;">
+    <img src="LOGO.png" alt="Company Logo" width="55" height="55">
+    富景园艺
+    
+  </div>
+  <!-- <span style="color: #635a0e; font-family:Papyrus; font-weight: bold; font-size:xx-large; ">Fortune Landscape</span> -->
+  <nav>
+    <a href="#hero" style="font-weight: bold;">Home</a>
+    <a href="#portfolio" style="font-weight: bold;">Portfolio</a>
+    <a href="#about" style="font-weight: bold;">About us</a>
+     <a href="#partners" style="font-weight: bold;">Partners</a>
+    <a href="#contact" style="font-weight: bold;">Contact us</a>
+  </nav>
+</header>
+
+<h1 style="text-align: center; font-weight: bold; font-size: x-large; font-family: Copperplate Gothic Light; margin-top: 5%;" >BACK YARD</h1>
+
+<section class="frontDoorImages" id="frontDoorImages">
+  <img src="LS10.jpg" alt="Driveway" >
+  <img src="LS4.jpg" alt="Driveway" > 
+  <img src="LS5.jpg" alt="Driveway" > 
+  <img src="LS9.jpg" alt="Driveway" >
+  <img src="LS13.jpg" alt="Driveway" >
+</section>
+
+<div class="lightbox" id="lightbox">
+  <img id="lightbox-img" src="">
+</div>
+
+<script src="FortuneLandJavaScript.js"></script>
+</body>
+</html>
