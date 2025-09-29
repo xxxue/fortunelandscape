@@ -23,6 +23,34 @@
   .left { padding-left: 10%; text-align: left; font-weight: bold;color: #ffffff;}
   .right { padding-right: 10%; text-align: right; font-weight: bold; color: #ffffff;}
   .hidden { display: none; }
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;       
+      align-items: flex-start;      
+    }
+
+    nav {
+      margin-top: 15px;             
+      display: flex;
+      flex-wrap: wrap;              
+      gap: 10px;
+    }
+
+    nav a {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .logo {
+      font-size: 24px;              
+    }
+
+    .logo span {
+      position: static;  
+      left: 0;
+      margin-left: 5px;  
+  }
+  }
 </style>
 </head>
 <body>
@@ -176,5 +204,6 @@
 <script src="FortuneLandJavaScript.js"></script>
 </body>
 </html>
+
 
 
